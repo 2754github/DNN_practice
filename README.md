@@ -1,2 +1,2 @@
 # DNN_practice
-Jupyter Notebook，Python3，Keras，ディープラーニング，ニューラルネットワーク
+キーワード：Jupyter Notebook，Python3，Keras，ディープラーニング，ニューラルネットワーク
