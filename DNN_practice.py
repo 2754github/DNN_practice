@@ -3,7 +3,7 @@
 from keras.datasets import mnist
 # from keras.datasets import fashion_mnist
 
- # カテゴリカル化に使う
+# カテゴリカル化に使う
 from keras.utils import np_utils
 
 # データの可視化に使う
@@ -49,21 +49,21 @@ y_test_label = np_utils.to_categorical(y_test)
 # モデルの定義
 def build_multilayer_perceptron():
     model = Sequential()
-    
+
     # 入力層-隠れ層1
     model.add(Dense(512, input_shape=(784,))) # 512 = 2^9 784 = x_train.shapeのサイズ
     model.add(Activation("relu")) # 活性化関数の種類　relu = ランプ関数
     model.add(Dropout(0.2)) # 20%の確率でドロップアウトさせる
-    
+
     # 隠れ層2
     model.add(Dense(512))
     model.add(Activation('relu'))
     model.add(Dropout(0.2))
-    
+
     # 出力層
     model.add(Dense(10)) # 10 = labelの数
     model.add(Activation("softmax")) # 活性化関数の種類　softmax = softmax関数
-    
+
     return model
 
 # モデルのビルド
@@ -106,7 +106,7 @@ wrongs = []
 for i, (x,y) in enumerate(zip(y_test,predicts)):
     if x != y:
         wrongs.append((i,(x,y)))
-        
+
 print("{0}個中{1}個間違えました！すいません！".format(len(y_test), len(wrongs)))
 
 print("間違えた画像のリスト↓ (最初の20個)")

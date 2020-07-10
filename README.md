@@ -1,2 +1,5 @@
 # DNN_practice
-キーワード：Jupyter Notebook，Python3，Keras，ディープラーニング，ニューラルネットワーク
+
+ディープラーニングによる画像分類をしたときのメモ。
+
+キーワード：Jupyter Notebook、Python3、Keras、ディープラーニング、ニューラルネットワーク
